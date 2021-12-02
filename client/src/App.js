@@ -1,6 +1,11 @@
-import logo from './logo.svg';
+
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './Pages/Home';
+import About from './Pages/About';
+import Profile from './Pages/Profile';
+import ErrorPage from './Pages/ErrorPage';
+
 
 function App() {
   return (
@@ -9,7 +14,10 @@ function App() {
 <a href='/home'>Go to Home Page</a> */}
       <Routes>
         this is where we declare our Routes
-        <Route path='/' />
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/profile' element={<Profile />} />
+        <Route path='*' element={<ErrorPage />} />
       </Routes>
     </Router>
   );
