@@ -23,7 +23,7 @@ function App() {
         this is where we declare our Routes
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/profile' element={<Profile />} />
+        <Route path='/profile/:username' element={<Profile />} />
         <Route path='*' element={<ErrorPage />} />
       </Routes>
     </Router>
